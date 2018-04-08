@@ -1,0 +1,16 @@
+.quote {
+  border-left: 2px solid black;
+  padding: 20px;
+  margin: 50px;
+}
+
+.timeline-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.center-img {
+  justify-content: center;
+  margin: auto;
+  padding: 20px 0px 0px 20px;
+}
