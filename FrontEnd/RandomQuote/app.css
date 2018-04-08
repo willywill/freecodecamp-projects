@@ -1,0 +1,23 @@
+body {
+  background-color: #ffdd57;
+  min-height: 100vh;
+}
+
+.quote {
+  font-size: 3rem;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.card-footer {
+  padding: 20px;
+}
+
+.button {
+  display: block !important;
+  width: 8rem;
+  margin: auto;
+}
+
+.app {
+  padding-top: 30vh;
+}

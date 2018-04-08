@@ -1,0 +1,25 @@
+<div class="app">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="quote has-text-centered">
+          <em>"{{quote}}"</em> - {{source}}
+        </div>
+        <br>
+        <button class="button is-warning" v-on:click.prevent="getRandomQuote">Generate</button>
+      </div>
+      <div class="card-footer">
+        <div class="container has-text-centered">
+          <a v-on:click.prevent="onTwitterClick()"><i class="fa fa-twitter"></i></a> this!
+        </div>
+      </div>
+    </div>
+   </div>
+ </div>
+ 
+ 
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+ <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+ 
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
