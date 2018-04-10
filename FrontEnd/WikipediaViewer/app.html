@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div class="app">
+<header>
+  <div class="title display-4 text-center">
+    {{title}}
+  </div>
+  <br>
+  <div class="container">
+    <div class="rows">
+      <div class="col">
+        <div class="input-group">
+          <input v-model="search" type="text" class="form-control" placeholder="Search Wikipedia">
+          <div class="input-group-append">
+            <button class="btn btn-sm btn-primary" @click.prevent="searchWikipedia()">Search</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col">
+        <p class="button-container text-center">
+        <a href="https://en.wikipedia.org/wiki/Special:Random"  target="_blank" class="btn btn-sm btn-primary text-white">
+          Feeling Lucky?
+        </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <hr>
+</div>
+<main>
+  <div class="info container">
+    <h4 v-if="!hasSearched" class="title text-center text-muted font-weight-light">
+       Search for something!
+    </h4>
+    <h3 class="title">
+      <a v-if="hasSearched" href="https://wikipedia.com">
+        <i class="fa fa-globe"></i> Wikipedia
+      </a>
+    </h3>
+    <h6 v-if="hasSearched" class="title">
+      {{results.length}} Results
+    </h6>
+    <h6 v-if="hasSearched" class="title">
+      Query: "{{search}}"
+    </h6>
+  </div>
+  <br>
+  <div v-if="hasSearched" class="gallery container">
+    <div class="row">
+      <div v-for="result in results" class="col-md-4">
+        <div class="card-row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{result.title}}</h5>
+<!--               <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6> -->
+              <p class="card-text text-center">{{result.description}}</p>
+              <a :href="result.link" target="_blank" style="display: block;" class="card-link text-center">Learn More <i class="fa fa-external-link"></i></a>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<br>
+<br>
+<br>
+<footer>
+  <p class="text-center">
+    Made with ♡ by – <a href="https://williamgermany.com" target="_blank">Will Germany</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

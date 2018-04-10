@@ -1,0 +1,8 @@
+a:hover {
+  text-decoration: none !important;
+}
+
+.card {
+  min-width: 18rem;
+  height: 15rem;
+}
