@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div class="container app">
+    <h5 class="title text-center">
+      Twitch Streams
+    </h5>
+  <div v-for="stream in streams" class="card-container">
+  <div class="card">
+    <div class="card-body">
+      <span class="card-img">
+        <img :src="stream.logo" alt="" width="32" height="32">
+      </span>
+      <h5 class="card-title d-inline">{{stream.displayName}}</h5>
+      <br><br>
+      <h6 v-if="stream.game" class="card-subtitle mb-2 text-muted"><i class="fa fa-circle text-success text-small"></i> Online – {{stream.game}}</h6>
+      <h6 v-else class="card-subtitle mb-2 text-muted"><i class="fa fa-circle text-small"></i> Offline</h6>
+      <p class="card-text">{{stream.status}}</p>
+      <a :href="stream.link" target="_blank" class="d-block text-center text-twitch font-weight-bold"><i class="fa fa-twitch"></i> Go to Twitch</a>
+    </div>
+  </div>
+  <br>
+ </div>
+  <div class="text-center">
+    Made with ♡ by - <a class="text-twitch" href="https://williamgermany.com">Will Germany</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

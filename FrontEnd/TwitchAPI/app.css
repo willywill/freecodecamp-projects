@@ -1,0 +1,45 @@
+::selection {
+    background-color: #d7adff;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: #4b367c !important;
+    color: white;
+    font-family: 'Helvetica Neue, Helvetica, Arial, sans-serif';
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #6441a4;
+  }
+  
+  .container {
+    margin-top: 3.5rem;
+    padding: 4rem;
+    padding-top: 20px;
+    background-color: white;
+  }
+  
+  .card-container > .card {
+    border-radius: 1px;
+    background-color: #faf9fa;
+  }
+  
+  a, .text-twitch {
+    color: #0f0826;
+  }
+  
+  a, .text-twitch:hover {
+    color: #6441a4;
+    text-decoration: none;
+  }
+  
+  .text-small {
+    font-size: 12px !important;
+  }
+  
+  .text-success {
+    text-shadow: 0px 0px 8px green;
+  }
