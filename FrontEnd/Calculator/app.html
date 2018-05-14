@@ -1,0 +1,33 @@
+<!--  CSS Imports -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+<div class="app card">
+  <header>
+    <div class="input-background"></div>
+    <br> <br>
+    <div class="input-container section">
+      <input v-model="calculate" class="input" type="text" placeholder="" readonly>
+    </div>
+  </header>
+  <div class="spacer" style="margin-top: 1em;"></div>
+  <main>
+    <div class="section">
+      <div class="button-grid">
+        <div v-for="(column, colIdx) in columns" class="columns is-mobile">
+          <div v-for="(row, rowIdx) in rows" class="column">
+            <div class="button-container">
+              <button @click.prevent="buttonPress(rowIdx === 3 ? operatorButtons[colIdx] : numberButtons[rowIdx + (colIdx * 3)])" class="button is-super-large">
+                {{rowIdx === 3 ? operatorButtons[colIdx] : numberButtons[rowIdx + (colIdx * 3)] }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- JS Imports -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
